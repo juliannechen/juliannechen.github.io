@@ -3,6 +3,18 @@
 <html>
 
   <head>
+
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+
+  <style>
+    .map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
     <script src="aboutMe.js"></script>
     <!-- <link rel="stylesheet" type ="text/ccs" href=""> -->
 
@@ -54,7 +66,7 @@
       }
 
 
-#cred{
+      #cred{
 
  position: fixed;
 
@@ -75,6 +87,22 @@
 
   </head>
   <body>
+    <div id="map" class="map"></div>
+<script type="text/javascript">
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([37.41, 8.82]),
+      zoom: 4
+    })
+  });
+  </script>
+
     <div id=cred> <i> <font size = 4> website by julianne :) </font></a></i></div>
 
 
@@ -91,11 +119,11 @@
     </p>
 
     <p><b>Likes: </b> <br>
-      desserts, traveling, concerts, dogs
+      desserts, traveling, concerts, and dogs
     </p>
 
     <p><b>Dislikes:</b> <br>
-      papaya, wasabi, the dark, snakes
+      papaya, wasabi, the dark, snakes, and peanut butter
     </p>
 
     <p><b>Fun Fact:</b> <br>
@@ -124,7 +152,7 @@
       <img alt="yet another picture of dog" src="https://i.imgur.com/ybczauC.jpg" width="336" height="448">
     </p2>
     <figure>
-    <figcaption> this is piper and he is 1 yr old australian labradoodle </figcaption>
+    <figcaption> this is piper and he is 2 yr old australian labradoodle </figcaption>
   </figure>
 
 
