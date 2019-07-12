@@ -7,7 +7,6 @@ var sfBayArea;
 function init(){
   initialLocation = ol.proj.fromLonLat([41.043316,28.862457]);
   london = ol.proj.fromLonLat([-0.12755, 51.507222]);
-  sfBayArea = ol.proj.fromLonLat([37.8272, 122.2913]);
 
   view = new ol.View({
     center: initialLocation,
@@ -32,5 +31,12 @@ function panHome() {
     duration: 2000
   })
 }
+
+function rotate() {
+  view.animate({
+    rotation: view.getRotation() - Math.PI / 2
+  })
+}
+
 
 window.onload = init;
